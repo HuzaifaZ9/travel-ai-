@@ -7,7 +7,7 @@ app = Flask(__name__, static_folder="static", template_folder="templates")
 CORS(app)
 
 # Configure Gemini API
-genai.configure(api_key=os.getenv('GEMINI_API_KEY', 'AIzaSyB9fIgOxfM7RaQqtuGrkdyNe4D5MTjoluo'))
+genai.configure(api_key=os.getenv('GEMINI_API_KEY', 'Enter your gemini api key '))
 
 def construct_gemini_prompt(form_data):
     """Construct a detailed prompt for Gemini API"""
