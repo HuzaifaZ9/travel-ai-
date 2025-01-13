@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TravelMate AI</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>TravelMate AI</h1>
+            <p>Discover personalized travel experiences tailored just for you. Let our AI craft the perfect itinerary to match your dreams and preferences.</p>
+        </div>
+
+        <div class="section form-section">
+            <h2>Plan Your Trip</h2>
+            <form id="tripPlannerForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">End Date</label>
+                        <input type="date" id="endDate" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="travelType">Travel Type</label>
+                        <select id="travelType" class="form-input">
+                            <option>Leisure</option>
+                            <option>Adventure</option>
+                            <option>Cultural</option>
+                            <option>Business</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget Range</label>
+                        <select id="budget" class="form-input">
+                            <option>Budget (0-500)</option>
+                            <option>Mid-Range (500-1500)</option>
+                            <option>Luxury (1500+)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="additionalPreferences">Additional Preferences</label>
+                    <textarea id="additionalPreferences" class="form-input"></textarea>
+                </div>
+                <button type="submit" class="btn">Generate AI Itinerary</button>
+            </form>
+        </div>
+
+        <div id="loadingSpinner" class="hidden">
+            <div class="spinner"></div>
+            <p>Generating your personalized itinerary...</p>
+        </div>
+
+        <div id="itineraryResult" class="section hidden">
+            <h2>Your AI-Generated Itinerary</h2>
+            <div id="itineraryContent"></div>
+            <button class="btn btn-secondary">Save Itinerary</button>
+        </div>
+    </div>
+
+    <script src="/static/index.js"></script>
+</body>
+</html>
